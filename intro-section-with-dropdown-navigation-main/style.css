@@ -1,0 +1,422 @@
+@import url("https://fonts.google.com/specimen/Epilogue");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Epilogue", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.attribution{
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 8%);
+}
+
+.attribution a{
+  color: hsl(0, 0%, 8%);
+}
+
+.attribution a:hover{
+  color: blue;
+  text-decoration: none;
+}
+
+.links-wrapper{
+    position: fixed;
+    right: -30rem;
+    top: 0;
+    height: 100vh;
+    width: 30rem;
+    background-color: hsl(0, 0%, 98%);
+    padding: 8rem 2rem;
+    transition: all 0.5s;
+}
+
+.change-nav{
+  right: 0;
+}
+
+.hamburger-wrapper{
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.change-hamburger .hamburger:first-child{
+  transform: rotate(45deg) translateX(0.8rem);
+}
+
+.change-hamburger .hamburger:nth-child(2){
+  display: none;
+}
+
+.change-hamburger .hamburger:last-child{
+  transform: rotate(-45deg) translate(0.4rem, 0.1rem);
+}
+
+.hamburger-wrapper .hamburger{
+    width: 4.5rem;
+    height: 0.2rem;
+    background-color: hsl(0, 0%, 8%);
+    margin: 0.6rem 0;
+    transition: all 0.3s;
+}
+
+:root{
+  --bs-accordion-border-width: 0px;
+}
+
+main {
+  height: 100vh;
+  position: relative;
+}
+
+nav {
+  width: 100%;
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.link-wrapper {
+  display: flex;
+}
+
+.menu-items {
+  display: flex;
+}
+
+.nav-brand {
+  margin-left: 3rem;
+  cursor: pointer;
+}
+
+.link-wrapper .nav-link {
+  margin: 0 1.5rem;
+  position: relative;
+  height: 3rem;
+}
+
+.link-wrapper .nav-link:hover img {
+  transform: rotate(-180deg);
+}
+
+.link-wrapper .nav-link:hover a {
+  color: rgba(0, 0, 0, 1);
+}
+
+.link-wrapper .nav-link:hover .content {
+  display: block;
+}
+
+.link-wrapper .nav-link a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.link-wrapper .nav-link img {
+  margin-left: 0.6rem;
+  margin-bottom: 0.3rem;
+  transition: all 0.1s linear;
+}
+
+.register-main {
+  height: 5rem;
+}
+
+.register-wrapper {
+  margin-right: 3rem;
+  display: flex;
+}
+
+.register-wrapper div {
+  margin: 0 2rem;
+  cursor: pointer;
+  padding: 0.7rem 2rem;
+  border-radius: 1rem;
+  transition: all 0.2s;
+}
+
+.register-wrapper .register {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.register-wrapper .register:hover {
+  border: 2px solid rgba(0, 0, 0, 1);
+}
+
+.register-wrapper div:hover a {
+  color: rgba(0, 0, 0, 1);
+}
+
+.register-wrapper a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.5rem;
+}
+
+.content {
+  display: none;
+  position: absolute;
+  top: 3rem;
+  background-color: hsl(0, 0%, 98%);
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 4rem 0.1rem rgba(0, 0, 0, 0.1);
+  animation: opacity 0.3s forwards;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.right {
+  right: 0;
+}
+
+.right p {
+  margin-left: 1.5rem;
+}
+
+.content div {
+  display: flex;
+  margin: 0.3rem 0;
+}
+
+.content div p {
+  font-size: 1.3rem;
+  color: hsl(0, 0%, 8%);
+  width: max-content;
+  cursor: pointer;
+}
+
+.content div img {
+  width: 2rem;
+  height: 2.2rem;
+}
+
+.left-side {
+  padding: 15rem 0;
+}
+
+.main-text {
+  font-size: 8rem;
+  font-weight: 700;
+}
+
+.left-side p {
+  font-size: 1.6rem;
+  width: 60%;
+}
+
+.left-side-btn {
+  border: 1px solid hsl(0, 0%, 8%);
+  display: inline-block;
+  border-radius: 0.5rem;
+  transition: all 0.1s;
+}
+
+.left-side-btn:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+
+.left-side-btn:hover a {
+  color: hsl(0, 0%, 98%);
+}
+
+.left-side-btn a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0.8rem 2rem;
+  color: hsl(0, 0%, 8%);
+}
+
+.img-div {
+  margin-top: 2rem;
+  width: 50rem;
+  float: left;
+}
+
+.img-div img {
+  width: 100%;
+}
+
+.some-logos {
+  margin-top: 9rem;
+}
+
+@media (max-width: 1200px){
+  html{
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 992px){
+  .img-div{
+    width: 40rem;
+    margin-top: 4rem;
+  }
+
+  .main-text{
+    font-size: 6rem;
+  }
+  .left-side p {
+    font-size: 1.6rem;
+    width: 90%;
+  }
+  .some-logos img{
+    width: 7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-div{
+    /* width: 40rem;
+    margin-top: 4rem; */
+    margin: 4 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .left-side {
+    padding: 4rem 0;
+  }
+
+  .left-side p {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .accordion{
+    --bs-accordion-bg: transparent:
+    border: var(--bs-accordion-border-width);
+  }
+
+  .accordion-body ul li{
+    display: flex;
+    list-style: none;
+    margin: 0.8rem 0;
+  }
+
+  .accordion-body ul li img{
+    margin-right: 2rem;
+    width: 2.2rem;
+  }
+  .accordion-body ul li a{
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+  }
+
+  .accordion-body ul li a:hover{
+    color: #000;
+  }
+
+  button.accordion-button{
+    font-size: 1.8rem;
+    border: none;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 0;
+  }
+
+  button.accordion-button:focus{
+    border: none;
+    box-shadow: none;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: #000;
+    background: none;
+  }
+
+  .accordion-button::after {
+    margin-left: 2rem;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .accordion-button:not(.collapsed)::after {
+    background-image: var(--bs-accordion-btn-icon);
+  }
+  .accordion-item {
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    margin-top: 1rem;
+  }
+
+  .nav-link-mobile{
+    margin-top: 1rem;
+  }
+
+  .nav-link-mobile{
+    padding: 0;
+  }
+
+  .nav-link-mobile li{
+    margin-top: 1rem;
+    list-style: none;
+  }
+
+  .nav-link-mobile a{
+    font-size: 1.8rem;
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+  }
+
+  .nav-link-mobile a:hover{
+    color: hsl(0, 0%, 8%);
+  }
+
+  .register-mobile-wrapper{
+    margin-top: 5rem;
+  }
+  .register-mobile-wrapper div{
+    margin: 2rem 0;
+  }
+
+  .register-mobile-wrapper div a{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    display: block;
+    text-align: center;
+  }
+
+  .register-mobile-wrapper .register-mobile{
+    border: 1.5px solid rgba(0, 0, 0, 0.6);
+    border-radius: 1.4rem;
+  }
+  .register-mobile-wrapper .register-mobile a{
+    padding: 1rem 0;
+  }
+}
